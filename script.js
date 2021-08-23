@@ -2,7 +2,8 @@ function sum(a){
     let arr1 = new Array()
     let kq = 0;
     while(a>1 && a<a+1){
-        a = a/2
+        // a = (a/2)
+        a = Math.round(((a/2) + Number.EPSILON) * 100) / 100
         arr1.push(a)        
     }
     try {
@@ -24,8 +25,17 @@ function Cal(slKem){
         document.getElementById("ketQua").innerHTML = "where's my kem"
     }
 }
+var tEst = function(num){
+    num = Math.round((num + Number.EPSILON) * 100) / 100
+    console.log(num)
+}
 
 function main(){    
+    var a = 1.55555
+    tEst(a)
+
     let slKem = document.getElementById("slKem").value
     Cal(slKem)
+
 }
+
