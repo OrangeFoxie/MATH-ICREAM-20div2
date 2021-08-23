@@ -25,17 +25,9 @@ function Cal(slKem){
         document.getElementById("ketQua").innerHTML = "where's my kem"
     }
 }
-var tEst = function(num){
-    num = Math.round((num + Number.EPSILON) * 100) / 100
-    console.log(num)
-}
 
 function main(){    
-    var a = 1.55555
-    tEst(a)
-
     let slKem = document.getElementById("slKem").value
     Cal(slKem)
-
 }
 
